@@ -1,6 +1,6 @@
 //import deps
 
-import 'test.css!';
+import './style/style.less!';
 
 import 'zone.js';
 import 'reflect-metadata';
@@ -19,13 +19,16 @@ import {
   Component,
   View,
   bootstrap,
-  NgFor
+  NgFor,
+  Inject
   } from 'angular2/angular2';
 
-import {print} from 'angular2/src/facade/lang';
+  import {Http, httpInjectables} from 'angular2/http';
 
-import {TestComp} from './comp';
+  import {print} from 'angular2/src/facade/lang';
 
+  import {TestComp} from './comp';
+  import {Zippy} from './zippy';
 
 
 //create a simple angular component
@@ -37,18 +40,55 @@ import {TestComp} from './comp';
 
   <h4>Hello {{name}}</h4><test-comp></test-comp>
   <button (click)="addRow()">Add</button>
+
+
+  <zippy title="Names" visible="true">
+  <button (click)="loadNames()">Load</button>
+  Current ID={{currentid}}
+  <ul class="nameList">
+  <li *ng-for="#person of people" [class.selected]="person.id==currentid" (click)="nameClick(person.id)">
+  {{person.name}}
+  </li>
+  </ul>
+  </zippy>
+
+  <zippy title="Items">
   <test-comp></test-comp>
+  <zippy title="Sub Items">
+  <ul class="nameList">
+  <li>Item1</li>
+  <li>Item2</li>
+  <li>Item3</li>
+  </ul>
+  </zippy>
+  </zippy>
+  <zippy (open)="pushLog('open')" (close)="pushLog('close')" title="Details">
+
   <test-comp *ng-for="t of it"></test-comp>
+  </zippy>
   `,
-  directives:[TestComp,NgFor]
+  directives:[TestComp,Zippy,NgFor]
   })
 class TestApp {
   name: string;
-  constructor(){
+  people:Object;
+  http:Http;
+  currentid:number;
+
+  constructor(http:Http){
+    this.http=http;
+    this.currentid=null;
     this.name = 'Angular2';
     this.it=[];
 
     this.it.push('test');
+
+    console.log(http);
+
+
+    
+
+
 
     setTimeout(() => {
       this.name = 'Angular2!!! Yay2!';
@@ -56,10 +96,32 @@ class TestApp {
       },1500);
   }
 
+  loadNames(){
+    this.http.get('./src/people.json').map(res=>res.json()).subscribe(people => this.people=people);
+
+  }
+
   addRow(){
     this.it.push('');
+  }
+
+  nameClick(id){
+    console.log(id);
+    this.currentid=id;
+  }
+
+  pushLog(action){
+    switch(action){
+      case 'open':
+      print('open');
+      break
+      case 'close':
+      print('close');
+      break;
+    }
+    
   }
 }
 
 //start our app
-bootstrap(TestApp);
+bootstrap(TestApp,[httpInjectables]);
