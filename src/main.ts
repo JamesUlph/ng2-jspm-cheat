@@ -29,15 +29,18 @@ import {
 
   import {TestComp} from './comp';
   import {Zippy} from './zippy';
+  import {SearchPanel} from './search';
 
+import {Store, Todo, TodoFactory} from './TodoStore';
 
 //create a simple angular component
 @Component({
-  selector: 'test-app'
+  selector: 'test-app',
+  appInjector:[Store,TodoFactory]
   })
 @View({
   template: `
-
+  <search-panel></search-panel>
   <h4>Hello {{name}}</h4><test-comp></test-comp>
   <button (click)="addRow()">Add</button>
 
@@ -66,8 +69,16 @@ import {
 
   <test-comp *ng-for="t of it"></test-comp>
   </zippy>
+
+<button (click)="clearStore()">Clear</button>
+<ul class="nameList">
+  <li *ng-for="#todo of todoStore.list">
+  {{todo.title}}
+  </li>
+  </ul>
+
   `,
-  directives:[TestComp,Zippy,NgFor]
+  directives:[TestComp,Zippy,SearchPanel,NgFor]
   })
 class TestApp {
   name: string;
@@ -75,7 +86,7 @@ class TestApp {
   http:Http;
   currentid:number;
 
-  constructor(http:Http){
+  constructor(http:Http,public todoStore:Store,public factory:TodoFactory){
     this.http=http;
     this.currentid=null;
     this.name = 'Angular2';
@@ -85,15 +96,25 @@ class TestApp {
 
     console.log(http);
 
+    this.todoStore.add(this.factory.create('test',false));
 
-    
 
+    console.log(todoStore);
 
+    this.todoStore.list.forEach((todo:Todo)=>{
+
+      console.log(todo);
+
+      });
 
     setTimeout(() => {
       this.name = 'Angular2!!! Yay2!';
       print('test');
       },1500);
+  }
+
+  clearStore(){
+    this.todoStore.clear();
   }
 
   loadNames(){
