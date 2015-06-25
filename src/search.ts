@@ -8,8 +8,8 @@ import {Store, Todo, TodoFactory} from './TodoStore';
 @View({
 	template:
 	`<div>Search panel:</div>	
-	<input type="text" #searchfilter />
-	<button (click)="doSearch(searchfilter)">Search</button>
+	<input type="text" #searchfilter placeholder="Entry name" />
+	<button (click)="doSearch(searchfilter)">Add</button>
 	`,
 	 appInjector:[Store,TodoFactory]
 })
@@ -26,9 +26,16 @@ export class SearchPanel {
 
 	doSearch(d){
 		
+		
+			
 		this.todoStore.add(this.factory.create(d.value,false));
+			
+		
 
 		d.value='';
+		
+
+		
 
 		
 	}
