@@ -1,3 +1,5 @@
+/// <reference path="../typings/angular2/angular2.d.ts" />
+
 import './style/style.less!';
 import 'zone.js';
 import 'reflect-metadata';
@@ -18,6 +20,7 @@ import {
 	import {TestComp} from './comp';
 	import {Zippy} from './zippy';
 	import {SearchPanel} from './search';
+	import {MenuBar} from './menu-bar';
 
 	@Component({
 		selector: 'test-app'
@@ -25,6 +28,8 @@ import {
 		})
 	@View({
 		template: `
+
+		<menu-bar></menu-bar>
 		<div>Init</div>
 
 		<zippy title="Staff - {{currentid}}">
@@ -34,9 +39,9 @@ import {
 		</zippy>
 
 		<zippy title="Samples"><span>None found</span></zippy>
-		<search-panel></search-panel>
-		<search-panel></search-panel>
-		<button (click)="clearStore()">Clear</button>
+		<search-panel place="Container number"></search-panel>
+		<search-panel place="Search..."></search-panel>
+		<button [disabled]="!todoStore.list.length>0" (click)="clearStore()">Clear</button>
 		<zippy visible="true">
 		<ul class="nameList">
 		<li *ng-for="#todo of todoStore.list">
@@ -44,12 +49,14 @@ import {
 		</li>
 		</ul>
 		</zippy>
+		<zippy title="List">
 		<test-comp></test-comp>
 		<test-comp></test-comp>
-		
-		`
+		<test-comp></test-comp>
+		</zippy>
+		`,
 
-		directives:[Zippy,SearchPanel,TestComp,NgFor]
+		directives:[Zippy,SearchPanel,TestComp,MenuBar,NgFor]
 		})
 
 	class TestApp {
@@ -67,8 +74,7 @@ import {
 				console.log(todo);
 				});
 
-			this.http.get('./src/people.json').map(res=>res.json()).subscribe(people => this.people=people);
-
+			this.http.get('./src/people.json').map(res=>res.json()).subscribe(people => this.people=people);			
 		}
 
 		clearStore(){

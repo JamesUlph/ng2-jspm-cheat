@@ -323,7 +323,7 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "http": "github:jspm/nodelibs-http@1.7.1",
       "https": "github:jspm/nodelibs-https@0.1.0",
-      "mime-types": "npm:mime-types@2.1.1",
+      "mime-types": "npm:mime-types@2.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "url": "github:jspm/nodelibs-url@0.1.0",
@@ -462,14 +462,14 @@ System.config({
     "npm:mime-db@1.12.0": {
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:mime-db@1.13.0": {
+    "npm:mime-db@1.14.0": {
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
     "npm:mime-types@2.0.14": {
       "mime-db": "npm:mime-db@1.12.0"
     },
-    "npm:mime-types@2.1.1": {
-      "mime-db": "npm:mime-db@1.13.0",
+    "npm:mime-types@2.1.2": {
+      "mime-db": "npm:mime-db@1.14.0",
       "path": "github:jspm/nodelibs-path@0.1.0"
     },
     "npm:mime@1.3.4": {
