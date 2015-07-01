@@ -12,7 +12,7 @@ import {
 	@View({
 		template: `
 
-		<div class="clickable" (click)="invoke()">Test comp {{name}}</div>
+		<div class="clickable" (click)="invoke()">Test comp{{name}}</div>
 
 		`
 		})

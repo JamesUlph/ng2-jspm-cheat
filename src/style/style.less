@@ -1,9 +1,9 @@
 @import 'reset';
 
 body {
-	background-color: #222;
+	background-color: #999;
 	color:white;
-	
+	font-size: 16px;
 }
 
 .tag {
@@ -61,6 +61,8 @@ body {
 
 .menubar {
 	background-color:#657;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
 	position: fixed;
 	width:100%;
 	height:50px;
@@ -68,3 +70,65 @@ body {
 	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
+
+@bk:#52f;
+
+
+.cal-wk {
+	
+}
+
+.cal-day {
+	display: inline-block;
+	width:32px;
+	height:32px;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: middle;
+	
+	&:hover {
+		background-color: red;
+	}
+}
+
+.cal-wrapper {
+	position:absolute;
+	width:189px;
+}
+
+.days {
+	width:189px;
+	background:@bk;
+}
+
+.day {
+	width: 25px;
+  height: 25px;
+  line-height: 25px;
+  
+  &.next {
+	    opacity: .4;
+  }
+}
+
+.cell {
+	display: inline-block;
+	  text-align: center;
+  cursor: pointer;
+  border: 1px solid @bk;
+  
+  &:hover {
+	  color: #f39c12;
+  border: 1px solid #f39c12;
+  border-radius: 4px;
+  background:red;
+  }
+  
+  &.current {
+  background: #f39c12;
+  color: #fff;
+  border-radius: 4px;
+  opacity: .8;
+  }
+}
+
