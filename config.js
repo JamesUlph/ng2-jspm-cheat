@@ -36,7 +36,7 @@ System.config({
       "assert": "npm:assert@1.3.0"
     },
     "github:jspm/nodelibs-buffer@0.1.0": {
-      "buffer": "npm:buffer@3.2.2"
+      "buffer": "npm:buffer@3.3.0"
     },
     "github:jspm/nodelibs-console@0.1.0": {
       "console-browserify": "npm:console-browserify@1.1.0"
@@ -204,7 +204,7 @@ System.config({
       "readable-stream": "npm:readable-stream@1.0.33",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:buffer@3.2.2": {
+    "npm:buffer@3.3.0": {
       "base64-js": "npm:base64-js@0.0.8",
       "ieee754": "npm:ieee754@1.1.6",
       "is-array": "npm:is-array@1.0.1"
