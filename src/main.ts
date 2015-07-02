@@ -1,12 +1,12 @@
 /// <reference path="../typings/angular2/angular2.d.ts" />
 
-//import './style/style.less!';
+import './style/style.less!';
 import './style/cal.less!';
 
 import 'zone.js';
 import 'reflect-metadata';
 //you may need es6-shim if you get an error relating to list.fill
-//import 'es6-shim';
+import 'es6-shim';
 
 import {
 	Component,
@@ -26,12 +26,12 @@ import {
 
 	@Component({
 		selector: 'test-app'
-		,appInjector:[Store,TodoFactory]
+		,viewInjector:[Store,TodoFactory]
 		})
 	@View({
 		template: `
 
-
+<search-panel></search-panel>
 
 <div class="clndr">
 	<div class="controls">
@@ -102,7 +102,8 @@ import {
 				console.log(todo);
 				});
 			
-			this.http.get('./src/people.json').map(res=>res.json()).subscribe(people => this.people=people);			
+			
+			this.http.get('./src/people.json').toRx().map(res=>res.json()).subscribe(people => this.people=people);			
 		}
 
 		clearStore(){

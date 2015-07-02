@@ -21,7 +21,7 @@ System.config({
 
 System.config({
   "map": {
-    "angular2": "npm:angular2@2.0.0-alpha.28",
+    "angular2": "npm:angular2@2.0.0-alpha.29",
     "css": "github:systemjs/plugin-css@0.1.13",
     "es6-shim": "github:es-shims/es6-shim@0.32.3",
     "less": "github:aaike/jspm-less-plugin@0.0.5",
@@ -110,7 +110,7 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:angular2@2.0.0-alpha.28": {
+    "npm:angular2@2.0.0-alpha.29": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1",
@@ -209,13 +209,13 @@ System.config({
       "ieee754": "npm:ieee754@1.1.6",
       "is-array": "npm:is-array@1.0.1"
     },
-    "npm:chalk@1.0.0": {
-      "ansi-styles": "npm:ansi-styles@2.0.1",
+    "npm:chalk@1.1.0": {
+      "ansi-styles": "npm:ansi-styles@2.1.0",
       "escape-string-regexp": "npm:escape-string-regexp@1.0.3",
-      "has-ansi": "npm:has-ansi@1.0.3",
+      "has-ansi": "npm:has-ansi@2.0.0",
       "process": "github:jspm/nodelibs-process@0.1.1",
-      "strip-ansi": "npm:strip-ansi@2.0.1",
-      "supports-color": "npm:supports-color@1.3.1"
+      "strip-ansi": "npm:strip-ansi@3.0.0",
+      "supports-color": "npm:supports-color@2.0.0"
     },
     "npm:combined-stream@1.0.5": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -335,10 +335,6 @@ System.config({
     "npm:generate-object-property@1.2.0": {
       "is-property": "npm:is-property@1.0.2"
     },
-    "npm:get-stdin@4.0.1": {
-      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.1"
-    },
     "npm:graceful-fs@3.0.8": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "constants": "github:jspm/nodelibs-constants@0.1.0",
@@ -352,16 +348,13 @@ System.config({
     },
     "npm:har-validator@1.8.0": {
       "bluebird": "npm:bluebird@2.9.30",
-      "chalk": "npm:chalk@1.0.0",
+      "chalk": "npm:chalk@1.1.0",
       "commander": "npm:commander@2.8.1",
       "is-my-json-valid": "npm:is-my-json-valid@2.12.0",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:has-ansi@1.0.3": {
-      "ansi-regex": "npm:ansi-regex@1.1.1",
-      "get-stdin": "npm:get-stdin@4.0.1",
-      "process": "github:jspm/nodelibs-process@0.1.1",
-      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    "npm:has-ansi@2.0.0": {
+      "ansi-regex": "npm:ansi-regex@2.0.0"
     },
     "npm:hash.js@1.0.3": {
       "inherits": "npm:inherits@2.0.1"
@@ -629,15 +622,11 @@ System.config({
       "util": "github:jspm/nodelibs-util@0.1.0",
       "zlib": "github:jspm/nodelibs-zlib@0.1.0"
     },
-    "npm:strip-ansi@2.0.1": {
-      "ansi-regex": "npm:ansi-regex@1.1.1",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "process": "github:jspm/nodelibs-process@0.1.1",
-      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    "npm:strip-ansi@3.0.0": {
+      "ansi-regex": "npm:ansi-regex@2.0.0"
     },
-    "npm:supports-color@1.3.1": {
-      "process": "github:jspm/nodelibs-process@0.1.1",
-      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    "npm:supports-color@2.0.0": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:timers-browserify@1.4.1": {
       "process": "npm:process@0.11.1"

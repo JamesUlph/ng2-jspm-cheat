@@ -14,11 +14,12 @@ import {Store, Todo, TodoFactory} from './TodoStore';
 	<input type="text" #searchfilter placeholder="{{place ? place : '' }}" />
 	<button (click)="doSearch(searchfilter)">Add</button>
 	`,
-	 appInjector:[Store,TodoFactory]
+	 viewInjector:[Store,TodoFactory]
 })
 
 export class SearchPanel {
 	searchFilter:string;
+
 	constructor(@Attribute('place') place:string,public todoStore:Store,public factory:TodoFactory){
 		this.searchFilter='';
 		console.log(place);		
@@ -28,19 +29,11 @@ export class SearchPanel {
 		console.log('key up ',$event);
 	}
 
-	doSearch(d){
-		
+	doSearch(d){		
 		if (d.value=='') return;
 			
 		this.todoStore.add(this.factory.create(d.value,false));
 		
-		
-
-		d.value='';
-		
-
-		
-
-		
+		d.value='';		
 	}
 }
