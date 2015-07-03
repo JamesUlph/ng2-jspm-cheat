@@ -122,7 +122,7 @@ System.config({
     "npm:asap@1.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:asn1.js@2.1.0": {
+    "npm:asn1.js@2.1.1": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "bn.js": "npm:bn.js@2.1.0",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -492,7 +492,7 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:parse-asn1@3.0.1": {
-      "asn1.js": "npm:asn1.js@2.1.0",
+      "asn1.js": "npm:asn1.js@2.1.1",
       "browserify-aes": "npm:browserify-aes@1.0.1",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "create-hash": "npm:create-hash@1.1.1",
@@ -574,7 +574,7 @@ System.config({
       "stream": "github:jspm/nodelibs-stream@0.1.0",
       "stringstream": "npm:stringstream@0.0.4",
       "tough-cookie": "npm:tough-cookie@2.0.0",
-      "tunnel-agent": "npm:tunnel-agent@0.4.0",
+      "tunnel-agent": "npm:tunnel-agent@0.4.1",
       "url": "github:jspm/nodelibs-url@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0",
       "zlib": "github:jspm/nodelibs-zlib@0.1.0"
@@ -641,7 +641,7 @@ System.config({
       "url": "github:jspm/nodelibs-url@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:tunnel-agent@0.4.0": {
+    "npm:tunnel-agent@0.4.1": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "events": "github:jspm/nodelibs-events@0.1.1",

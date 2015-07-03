@@ -31,6 +31,43 @@ import {
 	@View({
 		template: `
 
+<div class="calendar">
+<div class="header">
+	<i class="fa-angle-left"><</i>
+	
+	<span>July, 2015</span>
+	<i class="fa-angle-right">></i>
+</div>
+	<div class="week names">
+		<span class="day">Sun</span>
+		<span class="day">Mon</span>
+		<span class="day">Tue</span>
+		<span class="day">Wed</span>
+		<span class="day">Thu</span>
+		<span class="day">Fri</span>
+		<span class="day">Sat</span>
+	</div>
+	<div class="week">
+		<span class="day different-month">1</span>
+		<span class="day">2</span>
+		<span class="day">3</span>
+		<span class="day">4</span>
+		<span class="day selected">5</span>
+		<span class="day">6</span>
+		<span class="day">7</span>
+	</div>
+	<div class="week">
+	<span class="day ">1</span>
+		<span class="day">2</span>
+		<span class="day">3</span>
+		<span class="day">4</span>
+		<span class="day">5</span>
+		<span class="day">6</span>
+		<span class="day">7</span>
+	</div>
+</div>
+
+
 <search-panel></search-panel>
 
 <div class="clndr">
