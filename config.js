@@ -21,7 +21,7 @@ System.config({
 
 System.config({
   "map": {
-    "angular2": "npm:angular2@2.0.0-alpha.30",
+    "angular2": "npm:angular2@2.0.0-alpha.31",
     "css": "github:systemjs/plugin-css@0.1.13",
     "es6-shim": "github:es-shims/es6-shim@0.32.3",
     "less": "github:aaike/jspm-less-plugin@0.0.5",
@@ -104,13 +104,13 @@ System.config({
     "github:jspm/nodelibs-zlib@0.1.0": {
       "browserify-zlib": "npm:browserify-zlib@0.1.4"
     },
-    "npm:amdefine@0.1.1": {
+    "npm:amdefine@1.0.0": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "module": "github:jspm/nodelibs-module@0.1.0",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:angular2@2.0.0-alpha.30": {
+    "npm:angular2@2.0.0-alpha.31": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1",
@@ -159,7 +159,7 @@ System.config({
       "readable-stream": "npm:readable-stream@1.0.33",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
-    "npm:bluebird@2.9.32": {
+    "npm:bluebird@2.9.33": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:boom@2.8.0": {
@@ -322,7 +322,7 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "http": "github:jspm/nodelibs-http@1.7.1",
       "https": "github:jspm/nodelibs-https@0.1.0",
-      "mime-types": "npm:mime-types@2.1.2",
+      "mime-types": "npm:mime-types@2.1.3",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "url": "github:jspm/nodelibs-url@0.1.0",
@@ -346,7 +346,7 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2"
     },
     "npm:har-validator@1.8.0": {
-      "bluebird": "npm:bluebird@2.9.32",
+      "bluebird": "npm:bluebird@2.9.33",
       "chalk": "npm:chalk@1.1.0",
       "commander": "npm:commander@2.8.1",
       "is-my-json-valid": "npm:is-my-json-valid@2.12.0",
@@ -437,7 +437,7 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.1",
       "promise": "npm:promise@6.1.0",
       "request": "npm:request@2.58.0",
-      "source-map": "npm:source-map@0.4.3",
+      "source-map": "npm:source-map@0.4.4",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0",
       "url": "github:jspm/nodelibs-url@0.1.0"
     },
@@ -454,14 +454,14 @@ System.config({
     "npm:mime-db@1.12.0": {
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:mime-db@1.14.0": {
+    "npm:mime-db@1.15.0": {
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
     "npm:mime-types@2.0.14": {
       "mime-db": "npm:mime-db@1.12.0"
     },
-    "npm:mime-types@2.1.2": {
-      "mime-db": "npm:mime-db@1.14.0",
+    "npm:mime-types@2.1.3": {
+      "mime-db": "npm:mime-db@1.15.0",
       "path": "github:jspm/nodelibs-path@0.1.0"
     },
     "npm:mime@1.3.4": {
@@ -598,10 +598,8 @@ System.config({
       "hoek": "npm:hoek@2.14.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:source-map@0.4.3": {
-      "amdefine": "npm:amdefine@0.1.1",
-      "fs": "github:jspm/nodelibs-fs@0.1.2",
-      "path": "github:jspm/nodelibs-path@0.1.0",
+    "npm:source-map@0.4.4": {
+      "amdefine": "npm:amdefine@1.0.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:stream-browserify@1.0.0": {
