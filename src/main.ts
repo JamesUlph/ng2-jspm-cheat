@@ -35,7 +35,7 @@ import {
 <div class="header">
 	<i class="fa-angle-left"><</i>
 	
-	<span>July, 2015</span>
+	<span>July 2015</span>
 	<i class="fa-angle-right">></i>
 </div>
 	<div class="week names">
@@ -97,11 +97,15 @@ import {
 		
 		<div>Init</div>
 
-		<zippy title="Staff - {{currentid}}">
-		<ul class="nameList">
-		<li *ng-for="#person of people" (click)="nameClick(person.id)" [class.selected]="person.id==currentid">{{person.name}}</li>
+
+		<zippy title="Staff - {{currentid}}">		
+		<ul>
+		<li *ng-for="#p of people" (click)="nameClick(p.id)" [class.selected]="p.id==currentid">{{p.name}}</li>
 		</ul>
 		</zippy>
+
+
+		
 
 		<zippy title="Samples"><span>None found</span></zippy>
 		<search-panel place="Container number"></search-panel>
@@ -137,14 +141,17 @@ import {
 
 			this.todoStore.list.forEach((todo:Todo)=>{
 				console.log(todo);
-				});
+				});			
 			
-			
-			this.http.get('./src/people.json').toRx().map(res=>res.json()).subscribe(people => this.people=people);			
+			this.http.get('./src/people.json').toRx().map(res=>res.json()).subscribe(people => this.people=people);
+
+
+
 		}
 
 		clearStore(){
 			this.todoStore.clear();
+			console.log(this.people);
 		}
 
 		nameClick(id){
