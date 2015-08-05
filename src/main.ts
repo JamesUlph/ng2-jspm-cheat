@@ -69,7 +69,7 @@ import {
 
 
 <search-panel></search-panel>
-
+<search-panel></search-panel>
 <div class="clndr">
 	<div class="controls">
 		<div class="clndr-previous-button"><</div>
