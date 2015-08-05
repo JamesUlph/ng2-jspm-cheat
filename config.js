@@ -27,6 +27,7 @@ System.config({
     "less": "github:aaike/jspm-less-plugin@0.0.5",
     "less-loader": "npm:less-loader@2.2.0",
     "reflect-metadata": "npm:reflect-metadata@0.1.0",
+    "systemjs": "npm:systemjs@0.18.6",
     "typescript": "github:mhegazy/typescript@v1.5-beta2",
     "zone.js": "npm:zone.js@0.5.2",
     "github:aaike/jspm-less-plugin@0.0.5": {
@@ -36,7 +37,7 @@ System.config({
       "assert": "npm:assert@1.3.0"
     },
     "github:jspm/nodelibs-buffer@0.1.0": {
-      "buffer": "npm:buffer@3.3.1"
+      "buffer": "npm:buffer@3.4.0"
     },
     "github:jspm/nodelibs-console@0.1.0": {
       "console-browserify": "npm:console-browserify@1.1.0"
@@ -208,7 +209,7 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:buffer@3.3.1": {
+    "npm:buffer@3.4.0": {
       "base64-js": "npm:base64-js@0.0.8",
       "ieee754": "npm:ieee754@1.1.6",
       "is-array": "npm:is-array@1.0.1"
@@ -312,6 +313,13 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "prr": "npm:prr@0.0.0"
+    },
+    "npm:es6-module-loader@0.17.4": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0",
+      "util": "github:jspm/nodelibs-util@0.1.0",
+      "when": "npm:when@3.7.3"
     },
     "npm:forever-agent@0.6.1": {
       "http": "github:jspm/nodelibs-http@1.7.1",
@@ -638,6 +646,13 @@ System.config({
     "npm:supports-color@2.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
+    "npm:systemjs@0.18.6": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "es6-module-loader": "npm:es6-module-loader@0.17.4",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "when": "npm:when@3.7.3"
+    },
     "npm:timers-browserify@1.4.1": {
       "process": "npm:process@0.11.1"
     },
@@ -677,6 +692,9 @@ System.config({
     },
     "npm:vm-browserify@0.0.4": {
       "indexof": "npm:indexof@0.0.1"
+    },
+    "npm:when@3.7.3": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:zone.js@0.5.2": {
       "process": "github:jspm/nodelibs-process@0.1.1"
