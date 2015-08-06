@@ -17,6 +17,8 @@ import {
 
 	import {Http, httpInjectables} from 'angular2/http';
 
+	import {formDirectives, NgControl, Validators, NgFormModel, FormBuilder} from 'angular2/forms';
+
 	import {Store, Todo, TodoFactory} from './TodoStore';
 
 	import {TestComp} from './comp';
@@ -26,7 +28,7 @@ import {
 
 	@Component({
 		selector: 'test-app'
-		,viewInjector:[Store,TodoFactory]
+		,viewInjector:[FormBuilder,Store,TodoFactory]
 		})
 	@View({
 		template: `
@@ -97,17 +99,27 @@ import {
 		
 		<div>Init</div>
 
+		
 
-		<zippy title="Staff - {{currentid}}">		
+		<form [ng-form-model]="form">
+		
+		<select (change)="setCurrent($event)" ng-control="currentid" >
+		<option  *ng-for="#p of people"  [value]="p.id"  [selected]="p.id==form.currentid">{{p.name}}</option>
+		</select>
+		</form>
+
+		<button (click)="clearPeople()">Clear</button>
+
+		<zippy title="Staff - {{form.currentid}}" (open)="openClick()">		
 		<ul>
-		<li *ng-for="#p of people" (click)="nameClick(p.id)" [class.selected]="p.id==currentid">{{p.name}}</li>
+		<li *ng-for="#p of people" (click)="nameClick(p.id)" [class.selected]="p.id==form.currentid">{{p.name}}</li>
 		</ul>
 		</zippy>
 
 
 		
 
-		<zippy title="Samples"><span>None found</span></zippy>
+		<zippy title="Samples" (open)="openClick()"><span>None found</span></zippy>
 		<search-panel place="Container number"></search-panel>
 		<search-panel place="Search..."></search-panel>
 		<button [disabled]="!todoStore.list.length>0" (click)="clearStore()">Clear</button>
@@ -125,17 +137,24 @@ import {
 		</zippy>
 		`,
 
-		directives:[Zippy,SearchPanel,TestComp,MenuBar,NgFor]
+		directives:[formDirectives,Zippy,SearchPanel,TestComp,MenuBar,NgFor]
 		})
 
 	class TestApp {
+		form;
 		http:Http;
 		people[];
 		currentid:number;
 
-		constructor(http:Http,public todoStore:Store,public factory:TodoFactory){
+		constructor(fb:FormBuilder,http:Http,public todoStore:Store,public factory:TodoFactory){
 			this.http=http;
 			this.currentid=null;
+			this.people = null;
+
+			this.form = fb.group({'currentid':[0]});
+
+			console.log(fb);
+
 			console.log(http);
 			this.todoStore.add(this.factory.create('test',false));
 
@@ -143,10 +162,47 @@ import {
 				console.log(todo);
 				});			
 			
-			this.http.get('./src/people.json').toRx().map(res=>res.json()).subscribe(people => this.people=people);
+			//this.http.get('./src/people.json').toRx().map(res=>res.json()).subscribe(people => this.people=people);
 
 
 
+		}
+
+		setCurrent(x,y){
+			console.log(this.form.value);
+			this.form.currentid = this.form.value.currentid;
+		}
+
+		clearPeople(){
+			this.people = null;
+		}
+
+		loadError(msg){
+			console.log('fault:',msg);
+		}
+
+		loadComplete(){
+			console.log('complete');
+			this.form.currentid= 0;
+		}
+
+		openClick(){			
+			console.log('open');
+
+			if (this.people==null){
+				console.log('loading people');
+				this.http.get('./src/people.json').toRx().map(res=> res.json()).subscribe(
+					people => this.people = people,
+					x=> this.loadError(x),
+					() => this.loadComplete()
+				);
+
+				
+
+
+			}
+
+			
 		}
 
 		clearStore(){
@@ -156,7 +212,8 @@ import {
 
 		nameClick(id){
 			console.log(id);
-			this.currentid=id;
+			
+			this.form.currentid = id;
 		}
 	}
 

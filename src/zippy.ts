@@ -29,6 +29,9 @@ export class Zippy {
 	closeHandler:EventEmitter=new EventEmitter();
 
 	toggle(){
+
+		
+
 		this.visible=!this.visible;
 
 		if (this.visible){
