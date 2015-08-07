@@ -1,6 +1,4 @@
-
 import './style/style.less!';
-import './style/cal.less!';
 
 import 'zone.js';
 
@@ -43,6 +41,7 @@ import {SearchPanel} from './searchpanel';
 
 </form>
 
+<div class="panel"><div class="panel-title">title</div><div class="panel-content">test test test</div></div>
 
 	</div>`
 		, directives: [Zippy,SearchPanel,NgFor,formDirectives]
