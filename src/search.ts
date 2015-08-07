@@ -1,6 +1,6 @@
 /// <reference path="../typings/angular2/angular2.d.ts" />
 
-import {Component, View, Binding,Attribute} from 'angular2/angular2';
+import {Component, View, Binding,Attribute} from 'angular2/bootstrap';
 import {Store, Todo, TodoFactory} from './TodoStore';
 
 @Component({
@@ -14,7 +14,7 @@ import {Store, Todo, TodoFactory} from './TodoStore';
 	<input type="text" #searchfilter placeholder="{{place ? place : '' }}" />
 	<button (click)="doSearch(searchfilter)">Add</button>
 	`,
-	 viewInjector:[Store,TodoFactory]
+	 viewBindables:[Store,TodoFactory]
 })
 
 export class SearchPanel {

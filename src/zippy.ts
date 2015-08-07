@@ -1,4 +1,4 @@
-import {Component, View, EventEmitter} from 'angular2/angular2';
+import {Component, View, EventEmitter} from 'angular2/bootstrap';
 
 import {ObservableWrapper} from 'angular2/src/facade/async';
 
@@ -30,7 +30,7 @@ export class Zippy {
 
 	toggle(){
 
-		
+
 
 		this.visible=!this.visible;
 

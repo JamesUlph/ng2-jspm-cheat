@@ -21,7 +21,7 @@ import {
   bootstrap,
   NgFor,
   Inject
-  } from 'angular2/angular2';
+  } from 'angular2/bootstrap';
 
   import {Http, httpInjectables} from 'angular2/http';
 

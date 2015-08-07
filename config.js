@@ -13,7 +13,7 @@ System.config({
   },
   "packages": {
     "app": {
-      "main": "main",
+      "main": "TESTmain",
       "defaultExtension": "ts"
     }
   }
@@ -21,13 +21,15 @@ System.config({
 
 System.config({
   "map": {
-    "angular2": "npm:angular2@2.0.0-alpha.33",
+    "angular2": "npm:angular2@2.0.0-alpha.34",
     "css": "github:systemjs/plugin-css@0.1.13",
+    "edge": "npm:babel-core@5.8.21",
+    "edge-runtime": "npm:babel-runtime@5.8.20",
     "es6-shim": "github:es-shims/es6-shim@0.32.3",
     "less": "github:aaike/jspm-less-plugin@0.0.5",
     "less-loader": "npm:less-loader@2.2.0",
     "reflect-metadata": "npm:reflect-metadata@0.1.0",
-    "systemjs": "npm:systemjs@0.18.6",
+    "systemjs": "npm:systemjs@0.18.8",
     "typescript": "github:mhegazy/typescript@v1.5-beta2",
     "zone.js": "npm:zone.js@0.5.2",
     "github:aaike/jspm-less-plugin@0.0.5": {
@@ -37,7 +39,7 @@ System.config({
       "assert": "npm:assert@1.3.0"
     },
     "github:jspm/nodelibs-buffer@0.1.0": {
-      "buffer": "npm:buffer@3.4.0"
+      "buffer": "npm:buffer@3.4.1"
     },
     "github:jspm/nodelibs-console@0.1.0": {
       "console-browserify": "npm:console-browserify@1.1.0"
@@ -111,7 +113,7 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:angular2@2.0.0-alpha.33": {
+    "npm:angular2@2.0.0-alpha.34": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1",
@@ -154,6 +156,9 @@ System.config({
     "npm:aws-sign2@0.5.0": {
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "url": "github:jspm/nodelibs-url@0.1.0"
+    },
+    "npm:babel-runtime@5.8.20": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:bl@1.0.0": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -209,7 +214,7 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:buffer@3.4.0": {
+    "npm:buffer@3.4.1": {
       "base64-js": "npm:base64-js@0.0.8",
       "ieee754": "npm:ieee754@1.1.6",
       "is-array": "npm:is-array@1.0.1"
@@ -314,7 +319,7 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.1",
       "prr": "npm:prr@0.0.0"
     },
-    "npm:es6-module-loader@0.17.4": {
+    "npm:es6-module-loader@0.17.5": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0",
@@ -646,9 +651,9 @@ System.config({
     "npm:supports-color@2.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:systemjs@0.18.6": {
+    "npm:systemjs@0.18.8": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
-      "es6-module-loader": "npm:es6-module-loader@0.17.4",
+      "es6-module-loader": "npm:es6-module-loader@0.17.5",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "when": "npm:when@3.7.3"

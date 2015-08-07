@@ -3,7 +3,7 @@ import {
 	View,
 	bootstrap,
 	NgFor
-	} from 'angular2/angular2';
+	} from 'angular2/bootstrap';
 
 @Component({
 	selector:'menu-bar'

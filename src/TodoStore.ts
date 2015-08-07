@@ -1,6 +1,6 @@
 /// <reference path="../typings/angular2/angular2.d.ts" />
 
-import {Injectable} from 'angular2/angular2';
+import {Injectable} from 'angular2/bootstrap';
 import {ListWrapper} from 'angular2/src/facade/collection';
 
 export class KeyModel {

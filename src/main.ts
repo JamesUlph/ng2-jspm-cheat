@@ -13,7 +13,7 @@ import {
 	View,
 	bootstrap,
 	NgFor
-	} from 'angular2/angular2';
+	} from 'angular2/bootstrap';
 
 	import {Http, httpInjectables} from 'angular2/http';
 
@@ -28,7 +28,7 @@ import {
 
 	@Component({
 		selector: 'test-app'
-		,viewInjector:[FormBuilder,Store,TodoFactory]
+		,viewInjectables:[FormBuilder,Store,TodoFactory]
 		})
 	@View({
 		template: `
@@ -217,4 +217,6 @@ import {
 		}
 	}
 
-	bootstrap(TestApp,[httpInjectables]);
+	export function main() {
+		bootstrap(TestApp, [httpInjectables]);
+	}

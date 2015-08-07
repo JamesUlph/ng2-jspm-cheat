@@ -4,7 +4,7 @@ import {
 	Component,
 	View,
 	bootstrap
-	} from 'angular2/angular2';
+	} from 'angular2/bootstrap';
 
 	@Component({
 		selector: 'test-comp'
