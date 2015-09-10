@@ -1,4 +1,4 @@
-import {bootstrap, NgFor, Component, View,NgFor,Attribute} from 'angular2/bootstrap';
+import {bootstrap, NgFor, Component, View,Attribute} from 'angular2/angular2';
 
 @Component({
 	selector: 'search-panel',
@@ -13,7 +13,7 @@ import {bootstrap, NgFor, Component, View,NgFor,Attribute} from 'angular2/bootst
 export class SearchPanel {
 
 	constructor(@Attribute('place') place:string){
-		
+
 	}
 
 	doneKeyup($event){

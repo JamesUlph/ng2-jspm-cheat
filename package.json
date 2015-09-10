@@ -4,17 +4,17 @@
     "dependencies": {
       "angular2": "npm:angular2@^2.0.0-alpha.34",
       "css": "github:systemjs/plugin-css@^0.1.12",
-      "es6-shim": "github:es-shims/es6-shim@^0.32.2",
+      "es6-shim": "github:es-shims/es6-shim@^0.33.3",
       "less": "github:aaike/jspm-less-plugin@^0.0.5",
       "less-loader": "npm:less-loader@^2.2.0",
-      "reflect-metadata": "npm:reflect-metadata@^0.1.0",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.1",
       "systemjs": "npm:systemjs@^0.18.6",
-      "zone.js": "npm:zone.js@^0.5.1"
+      "zone.js": "npm:zone.js@^0.5.4"
     },
     "devDependencies": {
       "edge": "npm:babel-core@^5.1.13",
       "edge-runtime": "npm:babel-runtime@^5.1.13",
-      "typescript": "github:mhegazy/typescript@v1.5-beta2"
+      "typescript": "npm:typescript@1.5.3"
     }
   }
 }

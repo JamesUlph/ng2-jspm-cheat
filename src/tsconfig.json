@@ -15,12 +15,15 @@
         "!./node_modules/**/*.ts"
     ],
     "files": [
+        "./TESTmain.ts",
         "./TodoStore.ts",
         "./comp.ts",
-        "./main-old.ts",
         "./main.ts",
         "./menu-bar.ts",
+        "./rrmain.ts",
         "./search.ts",
+        "./searchpanel.ts",
+        "./x-main.ts",
         "./zippy.ts"
     ]
 }

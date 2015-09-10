@@ -1,6 +1,6 @@
 /// <reference path="../typings/angular2/angular2.d.ts" />
 
-import {Component, View, Binding,Attribute} from 'angular2/bootstrap';
+import {Component, View, Binding,Attribute} from 'angular2/angular2';
 import {Store, Todo, TodoFactory} from './TodoStore';
 
 @Component({
@@ -10,7 +10,7 @@ import {Store, Todo, TodoFactory} from './TodoStore';
 
 @View({
 	template:
-	`<div>Search panel:</div>	
+	`<div>Search panel:</div>
 	<input type="text" #searchfilter placeholder="{{place ? place : '' }}" />
 	<button (click)="doSearch(searchfilter)">Add</button>
 	`,
@@ -22,18 +22,18 @@ export class SearchPanel {
 
 	constructor(@Attribute('place') place:string,public todoStore:Store,public factory:TodoFactory){
 		this.searchFilter='';
-		console.log(place);		
+		console.log(place);
 	}
 
 	doneKeyup($event){
 		console.log('key up ',$event);
 	}
 
-	doSearch(d){		
+	doSearch(d){
 		if (d.value=='') return;
-			
+
 		this.todoStore.add(this.factory.create(d.value,false));
-		
-		d.value='';		
+
+		d.value='';
 	}
 }
